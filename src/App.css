@@ -1,53 +1,252 @@
+
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f0f4ff;
-  }
-  
-  .app {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f6;
+  color: #c2185b;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #fff0f6,
+    #ffc1dc,
+    #ff91c8
+  );
+}
+
+.home-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  background: #fff5fa;
+  border: 3px solid #ff1493;
+  border-radius: 24px;
+  box-shadow:
+    0 0 8px #ff1493,
+    0 0 18px #ff1493,
+    0 0 35px rgba(255, 20, 147, 0.8),
+    0 0 55px rgba(255, 105, 180, 0.5);
+  text-align: center;
+}
+
+.home-card h1 {
+  color: #ff1493;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px rgba(255, 20, 147, 0.25);
+}
+
+.home-card h2 {
+  color: #d81b72;
+  font-family: 'Poppins', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.home-card h3 {
+  color: #d81b72;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.home-card p {
+  color: #c04a82;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.start-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #ffffff;
+  border: 2px solid #ff1493;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 0 8px rgba(255, 20, 147, 0.6),
+    0 0 16px rgba(255, 105, 180, 0.4);
+  transition: all 0.25s ease;
+}
+
+.start-button:hover {
+  background: linear-gradient(135deg, #ff1493, #e60073);
+  box-shadow:
+    0 0 10px #ff1493,
+    0 0 20px #ff69b4,
+    0 0 30px rgba(255, 20, 147, 0.7);
+  transform: translateY(-2px);
+}
+
+.home-card button:not(.start-button) {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.home-card button:not(.start-button):hover {
+  border-color: #ff1493 !important;
+  box-shadow:
+    0 0 8px rgba(255, 20, 147, 0.6),
+    0 0 15px rgba(255, 105, 180, 0.4);
+}
+
+.home-card button:focus-visible {
+  outline: 3px solid #ff69b4;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
   .home-card {
-    width: 100%;
-    max-width: 500px;
-    padding: 40px 25px;
-    text-align: center;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 24px 18px;
   }
-  
+
   .home-card h1 {
-    color: #4f46e5;
-    font-size: 32px;
+    font-size: 27px;
   }
+
+  .home-card h2 {
+    font-size: 19px;
+  }
+
   
-  .home-card p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
+/* Keep all quiz questions in the same position */
+.home-card h2 {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Keep the answer choices consistent */
+.home-card button:not(.start-button) {
+  min-height: 48px;
+  margin: 10px 0;
+  transform: none;
+}
+
+/* Prevent movement when selecting an answer */
+.home-card button:not(.start-button):hover {
+  transform: none;
+}
+
+/* Make the quiz container more compact */
+.quiz-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.quiz-page .panel {
+  width: 100%;
+  max-width: 650px;
+  min-height: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+/* Keep the question and answers organized */
+.question-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+}
+
+/* Make the quiz page compact and square-like */
+.quiz-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #0b1026;
+  color: white;
+}
+
+/* Compact quiz box */
+.quiz-content {
+  width: 100%;
+  max-width: 620px;
+  height: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 28px;
+  background: #151b35;
+  border: 1px solid #343c62;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Keep the question card inside the box */
+.question-card {
+  width: 100%;
+  padding: 18px;
+  background: #1c2445;
+  border-radius: 12px;
+}
+
+/* Keep answer choices close together */
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Keep the question text compact */
+.question-card h2 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 8px 0 16px;
+}
+
+/* Make the next button fit the box */
+.quiz-content .primary-button {
+  width: 100%;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/* Adjust the box for smaller screens */
+@media (max-width: 600px) {
+  .quiz-content {
+    height: 80vh;
+    padding: 18px;
   }
-  
-  .start-button {
-    margin-top: 15px;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 8px;
-    background: #4f46e5;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .start-button:hover {
-    background: #3730a3;
-  }
+}
