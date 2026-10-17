@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Components/HomePage.jsx";
+import QuizPage from "./Components/QuizPage.jsx";
+import ResultPage from "./Components/ResultCard.jsx";
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <div className="home-card">
-        <h1>Quiz Challenge</h1>
-        <p>Test your knowledge and see how much you know!</p>
-        <button className="start-button">
-          Start Quiz
-        </button>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/quiz" element={<QuizPage />} />
+      <Route path="/results" element={<ResultPage />} />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   );
 }
-
-export default App;
