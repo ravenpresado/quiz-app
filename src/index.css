@@ -236,13 +236,15 @@ p {
   color: #ffffff;
 }
 
+
 .quiz-content {
   width: 100%;
   max-width: 600px;
-  height: 580px;
-  max-height: calc(100vh - 140px);
-  min-height: 400px;
-  overflow-y: hidden;
+  min-height: 0;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  margin: 0 auto;
 }
 
 .quiz-content .progress-section {
@@ -401,5 +403,13 @@ p {
   .result-buttons .primary-button {
     width: 100%;
   }
+}
+
+/* Center the quiz question */
+.quiz-content .question-card {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
