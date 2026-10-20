@@ -291,22 +291,16 @@ p {
   font-family: Arial, sans-serif;
 }
 
-.home-card {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 40px 24px;
-  text-align: center;
-  box-sizing: border-box;
+
+/* Homepage heading font weights */
+.home-card .welcome-normal {
+  font-weight: 400;
 }
 
-.home-card h1 {
-  color: #ffffff;
-  font-size: clamp(28px, 5vw, 42px);
+.home-card h1 strong {
   font-weight: 700;
-  line-height: 1.3;
-  margin: 0 0 18px;
 }
+
 
 .home-card p {
   color: #cbd5e1;
