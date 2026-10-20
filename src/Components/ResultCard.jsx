@@ -1,7 +1,6 @@
 
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { questions } from "./question.js";
 
 export default function ResultCard() {
   const location = useLocation();
@@ -63,33 +62,6 @@ export default function ResultCard() {
             <strong>{results.percentage}%</strong>
           </div>
         </div>
-
-        <h2>Answer Details</h2>
-
-        {questions.map((question, index) => {
-          const userAnswer = results.answers[index];
-          const isCorrect = userAnswer === question.answer;
-
-          return (
-            <div className="result-item" key={index}>
-              <h3>
-                Question {index + 1}: {question.question}
-              </h3>
-
-              <p>
-                Your Answer: {userAnswer || "No answer"}
-              </p>
-
-              <p>
-                Correct Answer: {question.answer}
-              </p>
-
-              <strong>
-                {isCorrect ? "Correct" : "Incorrect"}
-              </strong>
-            </div>
-          );
-        })}
 
         <div className="result-buttons">
           <button
