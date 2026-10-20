@@ -407,3 +407,17 @@ p {
   text-align: center;
 }
 
+/* Violet-to-blue gradient on all buttons */
+button,
+button:focus {
+  background: linear-gradient(90deg, #8b5cf6 0%, #3b82f6 100%) !important;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Slightly darker gradient on hover */
+button:hover {
+  background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%) !important;
+  transform: translateY(-2px);
+}
