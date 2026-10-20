@@ -1,17 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function HomePage() {
+function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <main className="page home-page">
-      <section className="panel home-panel">
-        
+    <main className="home-page">
+      <section className="home-card">
         <h1>Welcome to the Frontend Quiz!</h1>
-        
+
         <button
-          className="primary-button"
+          className="start-quiz-button"
           onClick={() => navigate("/quiz")}
         >
           Start Quiz
@@ -20,3 +19,5 @@ export default function HomePage() {
     </main>
   );
 }
+
+export default HomePage;
