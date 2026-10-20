@@ -476,3 +476,62 @@ button:hover {
   border-color: #c4b5fd;
   color: #ffffff;
 }
+
+
+/* Keep the quiz question box in a fixed position */
+.quiz-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Keep the question card the same height */
+.question-card {
+  width: 100%;
+  min-height: 320px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keep answer choices organized consistently */
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/* Keep the quiz content in a consistent position */
+.quiz-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Keep the question card height consistent */
+.question-card {
+  width: 100%;
+  min-height: 360px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Control spacing between answer choices */
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Keep each answer choice consistent */
+.answer-list .answer-option {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px 16px;
+}
+
