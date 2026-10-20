@@ -374,3 +374,32 @@ p {
     padding: 16px 8px;
   }
 }
+
+
+/* Result page buttons */
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.result-buttons .primary-button {
+  min-width: 160px;
+  padding: 14px 22px;
+}
+
+/* Stack buttons on small screens */
+@media (max-width: 480px) {
+  .result-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-buttons .primary-button {
+    width: 100%;
+  }
+}
+
