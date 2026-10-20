@@ -15,10 +15,15 @@ export const questions = [
       answer: "CSS",
     },
     {
-      question: "Which is a JavaScript library?",
-      options: ["Laravel", "Django", "React", "MySQL"],
-      answer: "React",
-    },
+        question: "In which decade did the term Information Technology (IT) become widely recognized in business?",
+        options: [
+          "1950s",
+          "1960s",
+          "1970s",
+          "1980s"
+        ],
+        answer: "1980s"
+      },
     {
       question: "What does CPU stand for?",
       options: [
